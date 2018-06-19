@@ -99,7 +99,7 @@ public class horizontal extends AppCompatActivity {
                         view.setText(view.getText() + "!");
                     }
                 });
-        /*
+
         Button button13 = (Button) findViewById(R.id.button13);
 
                  button13.setOnClickListener(
@@ -107,21 +107,38 @@ public class horizontal extends AppCompatActivity {
                     public void onClick(View v) {
                         TextView view = (TextView) findViewById(R.id.et1);
 
-                        view.setText(view.getText() + " ");
+                        if(view.getText().toString().isEmpty()==false) {
+
+                            Eraser del = new Eraser();
+                            view.setText(del.solve(view.getText().toString()));
+                        }
                     }
                 });
-        */
+
+        button13.setOnLongClickListener(
+                new Button.OnLongClickListener(){
+                    public boolean onLongClick(View v)
+                    {
+                        TextView view=(TextView) findViewById(R.id.et1);
+                        Eraser del = new Eraser();
+                        while(view.getText().toString().isEmpty()==false)
+                        {
+                          view.setText(del.solve(view.getText().toString()));
+                        }
+                        return true;
+                    }
+                }
+        );
         Button button14 = (Button) findViewById(R.id.button14);
         button14.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
 
                         TextView  view = (TextView)findViewById(R.id.et1);
-                        if(view.getText().toString().isEmpty()==false) {
+                        TextView view2=(TextView)findViewById(R.id.et2);
+                        view.setText("");
+                        view2.setText("");
 
-                            Eraser del = new Eraser();
-                            view.setText(del.solve(view.getText().toString()));
-                        }
 
                     }
                 });

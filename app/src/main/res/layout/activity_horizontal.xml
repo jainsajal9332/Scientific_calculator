@@ -102,6 +102,17 @@
         android:layout_marginStart="12dp"
          android:text="+" />
 
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="30dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/et1"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/backspace"
+               />
+
 </LinearLayout>
 
     <LinearLayout
