@@ -24,6 +24,7 @@ public class Eraser {
         map.put("sqrt",2);
         map.put("!",2);
         map.put(wrong_input,2);
+        map.put("pi",2);
 
 
         StringBuilder s=new StringBuilder(s1);

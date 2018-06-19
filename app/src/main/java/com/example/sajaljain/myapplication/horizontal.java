@@ -18,7 +18,7 @@ public class horizontal extends AppCompatActivity {
 
 
     static final String TAG="sajal_activity2";
-    public static int inverse_var=0,radian=1,event_fire=0;
+    public static int inverse_var=0,radian=0,event_fire=0;
 
     public static int unary_operator=0;
     public static char[] ch={'+','-','*','^','/'};
@@ -193,6 +193,7 @@ public class horizontal extends AppCompatActivity {
                             button21.setText("radian");
 
 
+
                     }
                 });
 
@@ -272,7 +273,7 @@ public class horizontal extends AppCompatActivity {
                     public void onClick(View v) {
                         TextView view = (TextView) findViewById(R.id.et1);
 
-                       // view.setText(view.getText() + "1");
+                        view.setText(view.getText() + "pi");
                     }
                 });
         button32.setOnClickListener(
@@ -339,7 +340,7 @@ public class horizontal extends AppCompatActivity {
                            onClick(button37);
                         }
                         else {
-                           if(sz-1>=0&&token_splitter.check(temp.charAt(sz-1))==true)
+                           if(sz-1>=0)
                                view.setText(temp+"*");
                         }
                     }
@@ -419,7 +420,7 @@ public class horizontal extends AppCompatActivity {
                         { view.setText( eraser.solve(view.getText().toString())+"/");
                         }
                         else {
-                            if(sz-1>=0&& token_splitter.check(temp.charAt(sz - 1)))
+                            if(sz-1>=0)
                                 view.setText(temp+"/");
                         }
                     }

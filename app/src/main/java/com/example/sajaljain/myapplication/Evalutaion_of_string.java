@@ -17,6 +17,7 @@ public class Evalutaion_of_string {
     static HashMap<String,Integer> tokens=new HashMap<String,Integer> ();
     static HashMap<String,Integer> trignometric_sign=new HashMap<String,Integer>();
     static String e="2.71828182846";
+    static String pi="3.141592653589793238";
     static double exp;
     static String wrong_input="INVALID INPUT";
 
@@ -75,6 +76,8 @@ public class Evalutaion_of_string {
         for(int i=0;i<lexeme.size();i++)
             if(lexeme.get(i).compareTo("e")==0)
                 lexeme.set(i,e);
+            else if(lexeme.get(i).compareTo("pi")==0)
+                lexeme.set(i,pi);
         return lexeme;
     }
     public static void trignometric_converion(ArrayList<String> lexeme)
@@ -135,7 +138,7 @@ public class Evalutaion_of_string {
     {
         if(horizontal.radian==1&&id>=1&&id<=6)
         {
-            value=(value*11)/630;
+            value=Math.toRadians(value);
         }
         if(id==1)
             return Math.sin(value);
@@ -150,16 +153,9 @@ public class Evalutaion_of_string {
         else if(id==6)
             return Math.atan(value);
         else if(id==7)
-             return Math.log(value);
+             return Math.log10(value);
         else if(id==8)
-        {
-            if(exp!=1)
-                return Math.log(value)/Math.log(exp);
-            else
-            {
-                return Math.log(value);
-            }
-        }
+            return Math.log(value);
         else if(id==9)
         return Math.abs(value);
         else if(id==10)

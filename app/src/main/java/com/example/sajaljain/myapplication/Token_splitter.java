@@ -47,6 +47,7 @@ public class Token_splitter {
             lexeme.put(")",1);
             lexeme.put("@",1);
             lexeme.put("sqrt",1);
+            lexeme.put("pi",1);
         }
         int sz=s.length(),cnt=0;
 
