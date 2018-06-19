@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View v) {
 
                         TextView view = (TextView) findViewById(R.id.et);
-                        view.setText(view.getText() + ".");
+                        view.setText(view.getText() +horizontal.previous_lexeme(view.getText().toString()));
 
                     }
                 });

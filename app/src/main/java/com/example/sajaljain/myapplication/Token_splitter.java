@@ -85,6 +85,11 @@ public class Token_splitter {
                         break;
                     }
                 }
+                if(b0==0)
+                {
+                    v.clear();v.add(wrong_input);return ;
+                }
+
                 if(temp.compareTo("(")==0)
                     cnt++;
                 else if (temp.compareTo(")")==0 )
