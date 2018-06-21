@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Caculator</string>
+    <string name="app_name">Calculator</string>
     <string name="Button1">1</string>
     <string name="Button2">2</string>
     <string name="Button3">3</string>
