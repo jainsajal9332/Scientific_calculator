@@ -1,3 +1,5 @@
+//A scientific calculator
+
 package com.example.sajaljain.myapplication;
 
 import android.content.Intent;
