@@ -76,8 +76,8 @@ public class Eraser {
         }
         if(b1==0)
             s.deleteCharAt(sz-1);
-        return s.toString();
-
+        string str= s.toString();
+         return str;
     }
 
 
